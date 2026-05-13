@@ -1,5 +1,4 @@
 # -----------------------------------------------------------
-# Name: Jacob Curtis
 # Date: May 13, 2026
 # Course: Bookstore Management System
 # Description:
