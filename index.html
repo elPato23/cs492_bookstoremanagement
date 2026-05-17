@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookstore Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">Spine Cackers Bookstore</div>
+    <nav>
+      <button id="loginBtn" class="nav-button">Login</button>
+      <button id="cartBtn" class="nav-button">Cart (<span id="cartCount">0</span>)</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Discover your next Spine to crack</h1>
+      <p>Login, browse inventory, add books to your cart, and checkout.</p>
+    </section>
+
+    <section class="inventory-section">
+      <div class="section-header">
+        <h2>Book Inventory</h2>
+        <div id="userStatus" class="user-status">Not signed in</div>
+      </div>
+      <div id="inventoryList" class="inventory-grid"></div>
+    </section>
+  </main>
+
+  <div id="cartPanel" class="panel hidden" aria-hidden="true">
+    <div class="panel-inner">
+      <div class="panel-header">
+        <h2>Your Cart</h2>
+        <button id="closeCartBtn" class="close-btn" aria-label="Close cart">×</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-summary">
+        <div>Total: $<span id="cartTotal">0.00</span></div>
+        <button id="checkoutBtn" class="primary-btn">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="loginPanel" class="panel hidden" aria-hidden="true">
+    <div class="panel-inner">
+      <div class="panel-header">
+        <h2>Sign In</h2>
+        <button id="closeLoginBtn" class="close-btn" aria-label="Close login">×</button>
+      </div>
+      <form id="loginForm" class="login-form">
+        <label for="username">Username</label>
+        <input id="username" type="text" placeholder="Enter username" required />
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter password" required />
+        <button type="submit" class="primary-btn">Sign In</button>
+      </form>
+      <p class="hint">Use any username/password for this demo.</p>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
